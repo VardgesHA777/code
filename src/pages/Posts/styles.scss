@@ -1,0 +1,29 @@
+.invite-new-member-container {
+  height: 100vh;
+  position: relative;
+
+  .invite-new-member-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    h1 {
+      font-weight: 700;
+      font-size: 32px;
+      color: #0f314d;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      color: #444444;
+    }
+    .invite-user {
+      width: 186px;
+      text-decoration: none;
+      height: unset;
+    }
+  }
+}

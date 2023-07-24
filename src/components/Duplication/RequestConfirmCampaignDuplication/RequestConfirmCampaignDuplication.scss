@@ -1,0 +1,17 @@
+.request-confirm-campaign-duplication-wrapper {
+  text-align: center;
+
+  .request-confirm-campaign-duplication-description {
+    margin-top: 132px;
+    p {
+      margin-top: 34px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f314d;
+      &:last-child {
+        margin-top: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}

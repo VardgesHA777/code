@@ -1,0 +1,20 @@
+.info-about-process {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  h1 {
+    font-weight: 600;
+    font-size: 32px;
+    color: #0f314d;
+    margin: 0;
+  }
+  p {
+    margin: 16px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #444444;
+  }
+}

@@ -1,0 +1,28 @@
+.custom-link {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 8px;
+  color: #B9B9B9;
+  background-color: unset;
+}
+
+.active-custom-link{
+  
+  background-color: #F9F9F9;
+  position: relative;
+  span{
+    color: #0F314D !important;
+  }
+  &::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #0F314D;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+  }
+}

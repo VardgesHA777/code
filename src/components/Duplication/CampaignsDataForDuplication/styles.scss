@@ -1,0 +1,145 @@
+.confirm-campaign-duplication-wrapper {
+  .title-wrapper {
+    color: #444444;
+    text-align: center;
+    span {
+      font-weight: 300;
+      font-size: 18px;
+    }
+  }
+  .accordion-wrapper {
+    margin-top: 32px;
+    box-shadow: 0px 0px 4px #e8e8e8;
+    border-radius: 8px;
+    &:last-child {
+      margin-bottom: 32px;
+    }
+    .remove {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .campaign-budget-wrapper {
+      font-weight: 600;
+      font-size: 18px;
+      color: #444;
+      .campaign-name-wrapper {
+        padding: 16px 32px;
+        border-bottom: 1px solid #f4f4f4;
+        display: flex;
+        justify-content: space-between;
+        .campaign-name {
+          width: 254px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #444444;
+          &:hover {
+            .tooltip {
+              display: block;
+            }
+          }
+        }
+      }
+      .campaign-budget-wrapper {
+        padding: 16px 32px;
+        border-bottom: 1px solid #f4f4f4;
+        display: flex;
+        justify-content: space-between;
+      }
+      .MuiPaper-elevation {
+        margin-bottom: 0 !important;
+      }
+    }
+    .MuiAccordionSummary-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .MuiAccordionDetails-root {
+      color: #444;
+    }
+    .ad-sets-container {
+      border-radius: 0px 0px 8px 8px;
+      max-height: 380px;
+      overflow-y: auto;
+    }
+  }
+  .ad-name-wrapper {
+    position: relative;
+    color: #444;
+    font-weight: 300;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 48px 16px 40px;
+    &:first-child {
+      border-top: 1px solid #f4f4f4;
+    }
+  }
+  .duplication-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 64px;
+    .cancel-confirm {
+      margin-right: 32px;
+      background: #ffffff;
+      border-radius: 4px;
+      padding: 16px 24px;
+      color: #0f314d;
+      font-weight: 400;
+      font-size: 16px;
+      border: unset;
+    }
+  }
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.ad-set-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 18px;
+  span:first-child {
+    margin: 16px 0;
+  }
+}
+.name-title {
+  position: absolute !important;
+  top: 50%;
+  left: 100%;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltip {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(95, 95, 95, 0.15);
+  border-radius: 8px;
+  display: none;
+}
+
+.MuiTooltip-popperArrow {
+  background-color: #fff;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+  min-height: unset !important;
+}
+
+.css-67l5gl.Mui-expanded {
+  margin: 0 !important;
+}
+
+.css-67l5gl {
+  box-shadow: 0px 0px 4px #e8e8e8 !important;
+}
+
+.MuiTooltip-popper.MuiTooltip-popperInteractive.MuiTooltip-popperArrow {
+  margin-right: 14px !important;
+}

@@ -1,0 +1,21 @@
+.search-campaign-wrapper {
+  width: 100%;
+  .input-container{
+    position: relative;
+    .error-message{
+      position: absolute;
+    }
+  }
+  .auth-button-container {
+    margin-left: 50px;
+  }
+}
+
+.all-duplications {
+  margin-right: 32px;
+  span {
+    font-weight: 700;
+    font-size: 23px;
+    color: #0f314d;
+  }
+}

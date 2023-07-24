@@ -1,0 +1,53 @@
+.choose-accounts-wrapper {
+  max-width: 1070px;
+  margin: auto;
+  .header {
+    background-color: #0f314d;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px #e8e8e8;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    height: 51px;
+    span {
+      font-size: 18px;
+      color: #fff;
+    }
+    .cancel-choose-campaigns {
+      position: relative;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+  }
+  .start-duplication {
+    margin-left: auto;
+    width: unset;
+  }
+}
+
+.simplebar-scrollbar::before {
+  background-color: #d8d8d8;
+}
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.css-1km1ehz.Mui-selected {
+  background: rgba(15, 49, 77, 0.05) !important;
+  border-radius: 4px !important;
+}
+
+.css-1km1ehz:hover{
+  background-color: #E2E6E9 !important;
+  border-radius: 4px !important;
+}
+
+.css-177ic5c {
+  margin-top: 8px !important;
+  padding: 0 8px !important;
+}
