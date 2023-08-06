@@ -9,8 +9,13 @@ export default function LeafletRuler() {
 
     useEffect(() => {
         if (!map) return;
+        const options = {
+            position: 'topright',            // Position to show the control. Values: 'topright', 'topleft', 'bottomright', 'bottomleft'
+        }
 
-        L.control.ruler().addTo(map);
+        setTimeout(() => {
+            L.control.polylineMeasure(options).addTo(map);
+        },1000)
     }, [map]);
 
     return null;
