@@ -1,26 +1,24 @@
-import { useEffect } from "react";
-import LeafletRuler from "../../components/LeafletRuler";
-import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import '../../components/LeafletRuler/leaflet-ruler.css'
+import { FullscreenControl } from "react-leaflet-fullscreen";
+import "react-leaflet-fullscreen/styles.css";
+import { Button } from "@vardgesha777/ui-kitt";
+import { MapContainer, TileLayer } from "react-leaflet";
+import Draw from "../../components/Draw";
 
-const Users = () => {
-    const position = [51.505, -0.09];
-    useEffect(() => {
-        const script = document.createElement("script")
-        script.src = 'https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js'
-        document.body.appendChild(script)
-    },[])
+const Map = () => {
+
   return (
-    <div>
-        <MapContainer center={position} zoom={13} style={{ height: "100vh" }}>
-            <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <LeafletRuler />
-        </MapContainer>
-    </div>
+     <div className='map-container'>
+       <MapContainer center={[54.989, 73.369]} zoom={12} scrollWheelZoom={false} id="map" style={{width: '800px', height: '800px'}}>
+         <TileLayer
+             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+         />
+           <Draw/>
+       </MapContainer>
+     </div>
   );
 };
 
-export default Users;
+export default Map;

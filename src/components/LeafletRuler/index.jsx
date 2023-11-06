@@ -1,22 +1,37 @@
-import { useEffect } from "react";
-import { useMap } from "react-leaflet";
-import L from "leaflet";
-import "./leaflet-ruler.css";
-import "./leaflet-ruler";
+import { MapControl } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet-measure';
+import './leaflet-measure.css';
 
-export default function LeafletRuler() {
-    const map = useMap();
+export default class MeasureControl extends MapControl {
+    createLeafletElement(props) {
+        return L.control.measure(props);
+    }
 
-    useEffect(() => {
-        if (!map) return;
-        const options = {
-            position: 'topright',            // Position to show the control. Values: 'topright', 'topleft', 'bottomright', 'bottomleft'
-        }
+    componentDidMount() {
+        super.componentDidMount();
+        const { map } = this.props.leaflet || this.context;
+        const {
+            onMeasurestart,
+            onMeasurefinish
+        } = this.props;
+        map.on('measurestart', (e) => {
+            this._propagateEvent(onMeasurestart, e);
+        })
+            .on('measurefinish', (e) => {
+                this._propagateEvent(onMeasurefinish, e);
+            });
+    }
 
-        setTimeout(() => {
-            L.control.polylineMeasure(options).addTo(map);
-        },1000)
-    }, [map]);
+    updateLeafletElement(fromProps, toProps) {
+        const { map } = this.props.leaflet || this.context;
+        this.leafletElement.remove();
+        this.leafletElement = new L.control.measure(toProps);
+        this.leafletElement.addTo(map)
+    }
 
-    return null;
+    _propagateEvent(eventHandler, event) {
+        if (typeof eventHandler !== 'function') return;
+        eventHandler(event);
+    }
 }

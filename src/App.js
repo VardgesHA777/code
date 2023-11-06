@@ -15,13 +15,6 @@ const App = () => {
               <Users/>
           }
         />
-        <Route
-          path={ROUTES.POSTS}
-          element={
-              <Posts />
-
-          }
-        />
 
         <Route path="*" element={<Navigate to={ROUTES.SIGNIN} />} />
       </Routes>
