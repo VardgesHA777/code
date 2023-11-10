@@ -10,7 +10,7 @@ const Map = () => {
 
   return (
      <div className='map-container'>
-       <MapContainer center={[54.989, 73.369]} zoom={12} scrollWheelZoom={false} id="map" style={{width: '800px', height: '800px'}}>
+       <MapContainer center={[54.989, 73.369]} zoom={12} scrollWheelZoom={false} id="map" style={{width: '1500px', height: '800px'}}>
          <TileLayer
              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
